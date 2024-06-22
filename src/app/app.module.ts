@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppCommonModule } from './common/common.module';
 
 
 
@@ -29,6 +30,7 @@ export function onAppInit(): () => Promise<any> {
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
+    AppCommonModule
   ],
   providers: [{
     provide: APP_INITIALIZER,
