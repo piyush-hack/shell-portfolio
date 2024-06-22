@@ -1,0 +1,196 @@
+body {
+    background-position: left top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    margin: 0;
+    padding: 0;
+    background: #161616;
+    color: white;
+}
+
+* {
+    font-family: "Source Code Pro", monospace;
+    color: white;
+}
+
+@for $i from 0 through 20 {
+    .w-#{5 * $i} {
+        width: 5% * $i;
+    }
+
+    .w-#{5 * $i}p {
+        width: 5px * $i;
+    }
+}
+
+@for $i from 0 through 100 {
+    .gap-#{$i} {
+        gap: 1px* $i;
+    }
+
+    .m-#{$i} {
+        margin: 1px* $i;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: 1px* $i !important;
+    }
+
+    .mt-#{$i} {
+        margin-top: 1px* $i !important;
+    }
+
+    .ms-#{$i} {
+        margin-left: 1px* $i !important;
+    }
+
+    .me-#{$i} {
+        margin-right: 1px* $i !important;
+    }
+
+    .br-#{2*$i} {
+        border-radius: 2px* $i !important;
+    }
+
+    .t-#{$i} {
+        top: 1px* $i !important;
+    }
+
+    .p-#{$i} {
+        padding: 1px* $i ;
+    }
+
+    .pt-#{$i} {
+        padding-top: 1px* $i !important;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: 1px* $i !important;
+    }
+
+    .ps-#{$i} {
+        padding-left: 1px* $i !important;
+    }
+
+    .pe-#{$i} {
+        padding-right: 1px* $i !important;
+    }
+
+    .fs-#{$i} {
+        font-size: 1px* $i !important;
+    }
+
+    .max-w-#{10*$i} {
+        max-width: 10px* $i !important;
+    }
+
+    .zindex-#{10*$i} {
+        z-index: 1* $i;
+    }
+}
+
+
+input,
+textarea,
+.input {
+    // padding: 7px;
+    border: 0px solid #000;
+    font-size: 16px;
+
+    &:focus {
+        outline: none !important;
+    }
+
+}
+
+$display-values: block inline inline-block flex grid none contents;
+
+// Optional: Define a mixin
+@mixin generate-display-classes($values) {
+    @each $value in $values {
+        .d-#{$value} {
+            display: $value !important;
+        }
+    }
+}
+
+// Generate classes using the mixin
+@include generate-display-classes($display-values);
+
+
+$position-values: relative absolute fixed;
+
+@mixin generate-position-classes($values) {
+    @each $value in $values {
+        .position-#{$value} {
+            position: $value !important;
+        }
+    }
+}
+
+@include generate-position-classes($position-values);
+// top: 20px;
+// position: relative;
+
+$jc-values: center flex-end flex-start;
+
+@mixin generate-jc-classes($values) {
+    @each $value in $jc-values {
+        .justify-content-#{$value} {
+            justify-content: $value !important;
+        }
+    }
+}
+
+@include generate-jc-classes($jc-values);
+
+$ai-values: center flex-end flex-start;
+
+@mixin generate-jc-classes($values) {
+    @each $value in $ai-values {
+        .align-items-#{$value} {
+            align-items: $value !important;
+        }
+    }
+}
+
+@include generate-jc-classes($ai-values);
+
+
+.m-auto {
+    margin: auto
+}
+
+a,
+.theme-p-color {
+    color: #ffcc00;
+}
+
+.theme-s-color {
+    color: plum;
+}
+
+.theme-danger{
+    color: red;
+}
+
+.desc {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.cp {
+    cursor: pointer;
+}
+
+.pe-none {
+    pointer-events: none;
+}
+
+pre,
+p {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+}

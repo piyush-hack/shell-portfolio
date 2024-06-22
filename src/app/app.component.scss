@@ -1,0 +1,13 @@
+#command-input {
+    background-color: transparent;
+    min-width: 50px;
+    padding-left: 5px;
+
+    &::after {
+        content: '';
+    }
+}
+
+.bottom-container {
+    height: 300px;
+}
