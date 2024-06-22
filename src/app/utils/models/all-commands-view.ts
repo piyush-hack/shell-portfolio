@@ -5,6 +5,7 @@ import { contactme } from "./commands/contact";
 import { help } from "./commands/help";
 import { intro } from "./commands/intro";
 import { projects } from "./commands/projects";
+import { repo } from "./commands/repo";
 import { resume } from "./commands/resume";
 import { skills } from "./commands/skills";
 
@@ -22,6 +23,7 @@ export class AllCommandsView {
         this.commands.push(projects)
         this.commands.push(contactme)
         this.commands.push(resume)
+        this.commands.push(repo)
     }
 
     getCommands() {
